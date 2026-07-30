@@ -4,6 +4,9 @@ from .models import Genre, Author, Book, BookInstance
 class BookInstanceInLine(admin.TabularInline):
     model = BookInstance
     extra = 0
+    readonly_fields = ['uuid']
+    can_delete = False
+    fields = ['uuid', 'due_back', 'status']
 
 class BookAdmin(admin.ModelAdmin):
     list_display = ['title', 'isbn', 'author', 'display_genre']
