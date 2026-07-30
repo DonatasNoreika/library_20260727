@@ -6,6 +6,10 @@ import uuid
 class Genre(models.Model):
     name = models.CharField()
 
+    class Meta:
+        verbose_name = "Žanras"
+        verbose_name_plural = "Žanrai"
+
     def __str__(self):
         return self.name
 
