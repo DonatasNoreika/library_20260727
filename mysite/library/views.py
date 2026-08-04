@@ -17,3 +17,9 @@ def authors(request):
         "authors": Author.objects.all(),
     }
     return render(request, template_name="authors.html", context=context)
+
+def author(request, author_pk):
+    context = {
+        "author": Author.objects.get(pk=author_pk),
+    }
+    return render(request, template_name="author.html", context=context)
