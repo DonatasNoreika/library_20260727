@@ -2,7 +2,7 @@
 
 {% block content %}
 {% for book in books %}
-<p>{{ book }}</p>
+<p><a href="{% url 'book' book.pk %}">{{ book }}</a></p>
 <hr>
 {% endfor %}
 {% endblock %}

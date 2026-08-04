@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-3">{{ book.title }}</h1>
+<p><b>Autorius: </b>{{ book.author }}</p>
+<p><b>ISBN: </b>{{ book.isbn }}</p>
+<p><b>Žanras: </b>{{ book.display_genre }}</p>
+<p>{{ book.summary }}</p>
+<hr>
+<h2>Knygos kopijos:</h2>
+{% for instance in book.instances.all %}
+<p class="{% if instance.status == 't' %}text-danger{% elif instance.status == 'r' %}text-warning{% elif instance.status == 'a' %}text-success{% endif %}">
+    {{ instance }}
+</p>
+{% empty %}
+<p>Šios knygos kopijų neturime</p>
+{% endfor %}
+{% endblock %}

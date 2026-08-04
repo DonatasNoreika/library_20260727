@@ -50,7 +50,9 @@ class Book(models.Model):
 
 
 class BookInstance(models.Model):
-    book = models.ForeignKey(to="Book", on_delete=models.CASCADE)
+    book = models.ForeignKey(to="Book",
+                             on_delete=models.CASCADE,
+                             related_name="instances")
     uuid = models.UUIDField(default=uuid.uuid4)
     due_back = models.DateField(null=True, blank=True)
 

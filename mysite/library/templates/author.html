@@ -8,6 +8,6 @@
 <hr>
 <h2>Autoriaus knygos:</h2>
 {% for book in author.books.all %}
-<p>{{ book }}</p>
+<p><a href="{% url 'book' book.pk %}">{{ book }}</a></p>
 {% endfor %}
 {% endblock %}
