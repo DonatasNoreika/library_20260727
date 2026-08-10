@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Book, BookInstance, Author
 from django.views import generic
+from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
@@ -14,8 +15,12 @@ def index(request):
 
 
 def authors(request):
+    authors = Author.objects.all()
+    paginator = Paginator(authors, per_page=2)
+    page_number = request.GET.get('page')
+    paged_authors = paginator.get_page(page_number)
     context = {
-        "authors": Author.objects.all(),
+        "authors": paged_authors,
     }
     return render(request, template_name="authors.html", context=context)
 
