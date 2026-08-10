@@ -32,6 +32,7 @@ class Book(models.Model):
     author = models.ForeignKey(to="Author",
                                on_delete=models.CASCADE,
                                related_name="books")
+    cover = models.ImageField(upload_to="covers", null=True, blank=True)
 
     # def display_genre(self):
     #     genres = self.genre.all()
