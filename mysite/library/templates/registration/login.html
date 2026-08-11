@@ -7,4 +7,5 @@
     {{ form | crispy }}
     <button type="submit" class="btn btn-primary">Prisijungti</button>
 </form>
+<p><a href="{% url 'password_reset' %}" class="btn btn-link w-100">Pamiršote slaptažodį?</a></p>
 {% endblock %}
