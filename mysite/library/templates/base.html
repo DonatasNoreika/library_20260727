@@ -49,6 +49,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'my_books' %}">Mano knygos</a>
+                </li>
+                <li class="nav-item">
                     <form method="post" action="{% url 'logout' %}">
                         {% csrf_token %}
                         <button type="submit" class="nav-link">Atsijungti</button>
