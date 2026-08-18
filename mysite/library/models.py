@@ -75,3 +75,18 @@ class BookInstance(models.Model):
 
     def __str__(self):
         return f"{self.uuid} ({self.book.title})"
+
+
+class BookReview(models.Model):
+    book = models.ForeignKey(to="Book",
+                             on_delete=models.SET_NULL,
+                             null=True, blank=True)
+    author = models.ForeignKey(to=User,
+                               on_delete=models.SET_NULL,
+                               null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.content
+

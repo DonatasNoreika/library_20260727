@@ -9,6 +9,9 @@
 <p><b>ISBN: </b>{{ book.isbn }}</p>
 <p><b>Žanras: </b>{{ book.display_genre }}</p>
 <p>{{ book.summary }}</p>
+<!--<hr>-->
+<!--<h2>Komentarai:</h2>-->
+<!--{%  %}-->
 <hr>
 <h2>Knygos kopijos:</h2>
 {% for instance in book.instances.all %}
