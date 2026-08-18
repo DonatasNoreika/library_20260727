@@ -80,7 +80,8 @@ class BookInstance(models.Model):
 class BookReview(models.Model):
     book = models.ForeignKey(to="Book",
                              on_delete=models.SET_NULL,
-                             null=True, blank=True)
+                             null=True, blank=True,
+                             related_name="reviews")
     author = models.ForeignKey(to=User,
                                on_delete=models.SET_NULL,
                                null=True, blank=True)
