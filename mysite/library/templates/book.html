@@ -11,6 +11,14 @@
 <p>{{ book.summary }}</p>
 <hr>
 <h2>Komentarai:</h2>
+{% if user.is_authenticated %}
+<form method="post" class="mb-4">
+    {% csrf_token %}
+    {% load crispy_forms_tags %}
+    {{ form | crispy }}
+    <button type="submit" class="btn btn-primary">Paskelbti</button>
+</form>
+{% endif %}
 {% for review in book.reviews.all %}
 <p><b>{{ review.author }}</b>, <i>{{ review.date }}</i></p>
 <p>{{ review.content }}</p>
