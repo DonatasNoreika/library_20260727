@@ -5,10 +5,11 @@
 <img src="{{ user.profile.photo.url }}" class="rounded-circle mb-4" width="50%">
 {% endif %}
 <h1>{{ user.username }} profilis</h1>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {% load crispy_forms_tags %}
-    {{ form | crispy }}
+    {{ u_form | crispy }}
+    {{ p_form | crispy }}
     <button type="submit" class="btn btn-primary">Pakeisti</button>
 </form>
 {% endblock %}
