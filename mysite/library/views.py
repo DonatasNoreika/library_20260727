@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormMixin
@@ -98,3 +99,13 @@ class SignUpView(generic.CreateView):
     form_class = UserCreationForm
     template_name = "signup.html"
     success_url = reverse_lazy("login")
+
+
+class UserUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = User
+    fields = ['first_name', 'last_name', 'email']
+    template_name = "profile.html"
+    success_url = reverse_lazy("profile")
+
+    def get_object(self, queryset = ...):
+        return self.request.user
