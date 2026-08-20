@@ -20,15 +20,33 @@
 </form>
 {% endif %}
 {% for review in book.reviews.all %}
-<p><b>{{ review.author }}</b>, <i>{{ review.date }}</i></p>
-<p>{{ review.content }}</p>
+<p>
+    {% if review.author.profile.photo %}
+    <img src="{{ review.author.profile.photo.url }}" class="rounded-circle" width="30px">
+    {% endif %}
+    <b>{{ review.author }}</b>, <i>{{ review.date }}</i><br>
+    {{ review.content }}</p>
 {% endfor %}
 <hr>
 <h2>Knygos kopijos:</h2>
 {% for instance in book.instances.all %}
-<p class="{% if instance.status == 't' %}text-danger{% elif instance.status == 'r' %}text-warning{% elif instance.status == 'a' %}text-success{% endif %}">
-    {{ instance }}
-</p>
+<div>
+    <p>UUID: {{ instance.uuid }}</p>
+    <p class="{% if instance.status == 't' %}text-danger{% elif instance.status == 'r' %}text-warning{% elif instance.status == 'a' %}text-success{% endif %}">
+        Būsena: {{ instance.get_status_display }}
+    </p>
+    {% if instance.reader %}
+    <p>Skaitytojas:
+        {% if instance.reader.profile.photo %}
+            <img src="{{ instance.reader.profile.photo.url }}" class="rounded-circle" width="30px">
+        {% endif %}
+        {{ instance.reader.username }}</p>
+    {% endif %}
+    {% if instance.due_back %}
+    <p>Bus grąžinta: {{ instance.due_back }}</p>
+    {% endif %}
+    <hr>
+</div>
 {% empty %}
 <p>Šios knygos kopijų neturime</p>
 {% endfor %}
