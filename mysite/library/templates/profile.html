@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if user.profile.photo %}
+<img src="{{ user.profile.photo.url }}" class="rounded-circle mb-4" width="50%">
+{% endif %}
 <h1>{{ user.username }} profilis</h1>
 <form method="post">
     {% csrf_token %}
