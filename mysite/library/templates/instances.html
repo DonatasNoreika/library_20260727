@@ -3,6 +3,6 @@
 {% block content %}
 <h1 class="display-4">Knygų egzempliorių administravimas</h1>
 {% for instance in instances %}
-<p>{{ instance }}</p>
+<p><a href="{% url 'instance' instance.pk %}">{{ instance }}</a></p>
 {% endfor %}
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-4">{{ instance.book.title }}</h1>
+<p><b>Autorius: </b>{{ instance.book.author }}</p>
+<p><b>UUID: </b>{{ instance.uuid }}</p>
+<p><b>Skaitytojas: </b>{{ instance.reader.username }}</p>
+<p><b>Grąžinimo data: </b>
+    <span class="{% if instance.is_overdue %}text-danger{% endif %}">
+    {{ instance.due_back }}
+    </span>
+</p>
+<p><b>Būsena: </b>{{ instance.get_status_display }}</p>
+{% endblock %}

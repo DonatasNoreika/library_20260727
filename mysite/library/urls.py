@@ -13,4 +13,5 @@ urlpatterns = [
     # path("profile/", views.UserUpdateView.as_view(), name="profile"),
     path("profile/", views.profile, name="profile"),
     path('instances/', views.BookInstanceListView.as_view(), name="instances"),
+    path('instances/<int:pk>/', views.BookInstanceDetailView.as_view(), name="instance"),
 ]
