@@ -11,4 +11,7 @@
     </span>
 </p>
 <p><b>Būsena: </b>{{ instance.get_status_display }}</p>
+<div>
+    <a class="btn btn-warning" href="{% url 'instances_update' instance.pk %}">Redaguoti</a>
+</div>
 {% endblock %}
