@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 # from django.contrib.auth.models import User
 from django.shortcuts import render, reverse, redirect
 from django.urls import reverse_lazy
@@ -127,3 +127,12 @@ def profile(request):
         'p_form': p_form,
     }
     return render(request, template_name="profile.html", context=context)
+
+
+class BookInstanceListView(LoginRequiredMixin, UserPassesTestMixin, generic.ListView):
+    model = BookInstance
+    template_name = "instances.html"
+    context_object_name = "instances"
+
+    def test_func(self):
+        return self.request.user.is_staff
