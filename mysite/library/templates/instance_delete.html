@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Knygos egzemplioriaus trynimas</h1>
+<p>Ar tikrai norite ištrinti knygos egzempliorių "{{ instance }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Taip</button>
+    <a class="btn btn-secondary" href="{% url 'instance' instance.pk %}">Ne</a>
+</form>
+
+{% endblock %}
