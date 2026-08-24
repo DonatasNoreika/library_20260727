@@ -9,7 +9,10 @@ from django.views import generic
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.contrib.auth.forms import UserCreationForm
-from .forms import BookReviewForm, UserUpdateForm, ProfileUpdateForm
+from .forms import (BookReviewForm,
+                    UserUpdateForm,
+                    ProfileUpdateForm,
+                    BookInstanceForm)
 
 # Create your views here.
 def index(request):
@@ -147,3 +150,12 @@ class BookInstanceDetailView(LoginRequiredMixin, UserPassesTestMixin, generic.De
         return self.request.user.is_staff
 
 
+class BookInstanceCreateView(LoginRequiredMixin, UserPassesTestMixin, generic.CreateView):
+    model = BookInstance
+    template_name = "instance_form.html"
+    # fields = ['book', 'due_back', 'reader', 'status']
+    form_class = BookInstanceForm
+    success_url = reverse_lazy("instances")
+
+    def test_func(self):
+        return self.request.user.is_staff

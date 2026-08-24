@@ -2,6 +2,9 @@
 
 {% block content %}
 <h1 class="display-4">Knygų egzempliorių administravimas</h1>
+<div class="my-3">
+    <a class="btn btn-primary" href="{% url 'instances_create' %}">Naujas egzempliorius</a>
+</div>
 {% for instance in instances %}
 <p><a href="{% url 'instance' instance.pk %}">{{ instance }}</a></p>
 {% endfor %}
