@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Šiuo metu turime:</h1>
+{% load i18n %}
+<h1>{% trans 'Today we have:' %}</h1>
 <ul>
-    <li>Knygų: <b>{{ num_books }}</b></li>
-    <li>Knygų kopijų: <b>{{ num_instances }}</b></li>
-    <li>Laisvų kopijų: <b>{{ num_instances_available }}</b></li>
-    <li>Autorių: <b>{{ num_authors }}</b></li>
-    <li>Apsilankymų skaičius: {{ num_visits }}</li>
+    <li>{% trans 'Books:' %} <b>{{ num_books }}</b></li>
+    <li>{% trans 'Book Instances:' %} <b>{{ num_instances }}</b></li>
+    <li>{% trans 'Book Instances Available:' %} <b>{{ num_instances_available }}</b></li>
+    <li>{% trans 'Authors:' %} <b>{{ num_authors }}</b></li>
+    <li>{% trans 'Yours visits:' %}: {{ num_visits }}</li>
 </ul>
 {% endblock %}

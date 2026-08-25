@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-25 19:52+0300\n"
-"PO-Revision-Date: 2026-08-25 19:54+0300\n"
+"POT-Creation-Date: 2026-08-25 20:18+0300\n"
+"PO-Revision-Date: 2026-08-25 20:19+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: lt\n"
@@ -52,7 +52,7 @@ msgstr "Pavardė"
 msgid "Description"
 msgstr "Aprašymas"
 
-#: .\models.py:49 .\models.py:86
+#: .\models.py:49 .\models.py:86 .\templates\base.html:40
 msgid "Books"
 msgstr "Knygos"
 
@@ -60,7 +60,7 @@ msgstr "Knygos"
 msgid "Author"
 msgstr "Autorius"
 
-#: .\models.py:56
+#: .\models.py:56 .\templates\base.html:37
 msgid "Authors"
 msgstr "Autoriai"
 
@@ -135,3 +135,63 @@ msgstr "Knygos apžvalga"
 #: .\models.py:143
 msgid "Book Reviews"
 msgstr "Knygos apžvalgos"
+
+#: .\templates\base.html:5 .\templates\base.html:21 .\templates\base.html:91
+msgid "Your Library"
+msgstr "Tavo Biblioteka"
+
+#: .\templates\base.html:23
+msgid "This is Django demo project!"
+msgstr "Tai yra Django demo projektas!"
+
+#: .\templates\base.html:34
+msgid "HOME"
+msgstr "PRADŽIA"
+
+#: .\templates\base.html:53
+msgid "My Books"
+msgstr "Mano knygos"
+
+#: .\templates\base.html:57
+msgid "Administration"
+msgstr "Administravimas"
+
+#: .\templates\base.html:63
+msgid "Logout"
+msgstr "Atsijungti"
+
+#: .\templates\base.html:68
+msgid "SignUp"
+msgstr "Registruotis"
+
+#: .\templates\base.html:71
+msgid "Login"
+msgstr "Prisijungti"
+
+#: .\templates\base.html:76
+msgid "Search"
+msgstr "Paieška"
+
+#: .\templates\index.html:5
+msgid "Today we have:"
+msgstr "Šiandien mes turime:"
+
+#: .\templates\index.html:7
+msgid "Books:"
+msgstr "Knygos:"
+
+#: .\templates\index.html:8
+msgid "Book Instances:"
+msgstr "Knygos egzemplioriai:"
+
+#: .\templates\index.html:9
+msgid "Book Instances Available:"
+msgstr "Laisvi knygų egzemplioriai"
+
+#: .\templates\index.html:10
+msgid "Authors:"
+msgstr "Autoriai:"
+
+#: .\templates\index.html:11
+msgid "Yours visits:"
+msgstr "Apsilankymų skaičius:"
