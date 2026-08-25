@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-25 19:52+0300\n"
+"PO-Revision-Date: 2026-08-25 19:54+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : "
+"n%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.6\n"
+
+#: .\models.py:12
+msgid "User"
+msgstr "Vartotojas"
+
+#: .\models.py:13
+msgid "Photo"
+msgstr "Nuotrauka"
+
+#: .\models.py:32
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: .\models.py:35 .\models.py:62 .\models.py:79
+msgid "Genre"
+msgstr "Žanras"
+
+#: .\models.py:36
+msgid "Genres"
+msgstr "Žanrai"
+
+#: .\models.py:42
+msgid "First Name"
+msgstr "Vardas"
+
+#: .\models.py:43
+msgid "Last Name"
+msgstr "Pavardė"
+
+#: .\models.py:44
+msgid "Description"
+msgstr "Aprašymas"
+
+#: .\models.py:49 .\models.py:86
+msgid "Books"
+msgstr "Knygos"
+
+#: .\models.py:55 .\models.py:64 .\models.py:132
+msgid "Author"
+msgstr "Autorius"
+
+#: .\models.py:56
+msgid "Authors"
+msgstr "Autoriai"
+
+#: .\models.py:59
+msgid "Title"
+msgstr "Pavadinimas"
+
+#: .\models.py:60
+msgid "Summary"
+msgstr "Aprašymas"
+
+#: .\models.py:67
+msgid "Cover"
+msgstr "Viršelis"
+
+#: .\models.py:85 .\models.py:91 .\models.py:127
+msgid "Book"
+msgstr "Knyga"
+
+#: .\models.py:95
+msgid "Due Back"
+msgstr "Grąžinimo data"
+
+#: .\models.py:99
+msgid "Administered"
+msgstr "Administruojama"
+
+#: .\models.py:100
+msgid "Taken"
+msgstr "Paimta"
+
+#: .\models.py:101
+msgid "Available"
+msgstr "Laisva"
+
+#: .\models.py:102
+msgid "Reserved"
+msgstr "Rezervuota"
+
+#: .\models.py:105
+msgid "Status"
+msgstr "Būsena"
+
+#: .\models.py:107
+msgid "Reader"
+msgstr "Skaitytojas"
+
+#: .\models.py:114
+msgid "Is overdue"
+msgstr "Praleistas terminas"
+
+#: .\models.py:120
+msgid "Book Instance"
+msgstr "Knygos egzempliorius"
+
+#: .\models.py:121
+msgid "Book Instances"
+msgstr "Knygos egzemplioriai"
+
+#: .\models.py:135
+msgid "Date Created"
+msgstr "Sukūrimo data"
+
+#: .\models.py:136
+msgid "Content"
+msgstr "Turinys"
+
+#: .\models.py:142
+msgid "Book Review"
+msgstr "Knygos apžvalga"
+
+#: .\models.py:143
+msgid "Book Reviews"
+msgstr "Knygos apžvalgos"
